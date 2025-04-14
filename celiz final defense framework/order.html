@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order System</title>
+    <link rel="stylesheet" href="order.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="header--menu">
+            <div class="menu--icons">
+                <div class="cart--icons">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span>0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cover">
+        <div class="cover-overlay">
+            <h1>Quick Bite</h1>
+            <span class="slogan">where taste takes the fast lane</span>
+        </div>
+    </section>
+
+    <main>
+        <h2 class="section-heading">Menu Items</h2>
+        <div class="card--list">
+            <div class="card">
+                <img src="menu coffee.jpg" alt="" />
+                <h4 class="card--title">Coffee</h4>
+                <div class="card--price">
+                    <div class="price">$3.50</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="menu coffee.jpg" alt="" />
+                <h4 class="card--title">pizza</h4>
+                <div class="card--price">
+                    <div class="price">$4.50</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="menu coffee.jpg" alt="" />
+                <h4 class="card--title">donut</h4>
+                <div class="card--price">
+                    <div class="price">$5.50</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </div>
+            <!-- Repeat for other items -->
+        </div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-close">
+            </div>
+            <div class="cart-menu">
+                <h3>My Cart</h3>
+                <div class="cart-items"></div>
+            </div>
+            <div class="sidebar--footer">
+                <div class="total--amount">
+                    <h5>Total</h5>
+                    <div class="cart-total">$0.00</div>
+                </div>
+                <div class="cart-btn">
+                    <a href="signup.html" class="checkout-btn">Checkout</button></a>
+                
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="order.js"></script>
+</body>
+</html>

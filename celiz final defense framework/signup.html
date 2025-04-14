@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style2.css" />
+	<title>Signup Form</title>
+</head>
+<body>
+	<h2>Signup Form</h2>
+
+<form onsubmit="return validateSignup()">
+    <label>Full Name:</label>
+    <input type="text" id="fullName">
+    <p id="nameError" style="color:red;"></p>
+
+    <label>Email:</label>
+    <input type="text" id="signupEmail">
+    <p id="emailError" style="color:red;"></p>
+
+    <label>Address:</label>
+    <input type="text" id="signupAddress">
+    <p id="addressError" style="color:red;"></p>
+
+    <button type="submit">Sign Up</button>
+</form>
+
+<script>
+function validateSignup() {
+    let name = document.getElementById("fullName").value;
+    let email = document.getElementById("signupEmail").value;
+    let address = document.getElementById("signupAddress").value;
+    let isValid = true;
+
+    document.getElementById("nameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("addressError").innerText = "";
+
+    if (name.trim() === "") {
+        document.getElementById("nameError").innerText = "Please enter your name.";
+        isValid = false;
+    }
+
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerText = "Invalid email format.";
+        isValid = false;
+    }
+
+    if (address.trim() === "") {
+        document.getElementById("addressError").innerText = "Please enter your address.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        window.location.href = "redirect.html"; // Redirect to the new webpage
+    }
+
+    return false; // Prevent form submission
+}
+</script>
+
+</body>
+</html>
